@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <ul style='cursor:pointer'>
+        <li>say zero</li>
+        <li>say one</li>
+        <li>say two</li>
+    </ul>
+</body>
+<script>
+    // now i Understand, the var is functionally-lexically scoped
+    // which means the i inside event-listeners will print the last value of i which is 3
+    const items = document.querySelectorAll('li');
+    for (let i = 0; i < items.length; i++) {
+        items[i].addEventListener('click', () => {
+            alert(i);
+        })
+    }
+</script>
+
+</html>
