@@ -1,5 +1,6 @@
 // problem with deep cloning example: 
-// solved  two ways 
+// solved  two ways: using assign which is a more difficult to read
+// using the Object-Spread-Operator that is friendlier to the eyes
 const defaultEmployee = {
     name: {
         first: '',
