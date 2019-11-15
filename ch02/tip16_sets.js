@@ -16,6 +16,18 @@ const dogs = [{
         breed: 'labrador',
         color: 'chocolate',
     },
+    {
+        name: 'shadow',
+        size: 'medium',
+        breed: 'labrador',
+        color: 'chocolate',
+    },
+    {
+        name: 'shadow',
+        size: 'medium',
+        breed: 'labrador',
+        color: 'Yellow',
+    }
 ];
 
 
@@ -26,3 +38,10 @@ function getUniqueColors(dogs) {
     }
     return [...unique];
 }
+
+
+// using reduce 
+const elegantArray = [...dogs.reduce((colors, {
+    color
+}) => colors.add(color), new Set())];
+console.log(elegantArray)
